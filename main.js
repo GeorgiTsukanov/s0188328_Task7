@@ -1,33 +1,34 @@
 function getImageURL() {
     return [
-        "i1.jpg",
-        "i2.jpg",
-        "i3.jpg",
-        "i4.jpg",
-        "i5.jpg",
-        "i6.jpg"
+        "1.jpg",
+        "2.jpg",
+        "3.jpg",
+        "4.jpg",
+        "6.jpg",
+        "7.jpg",
+        "8.jpg"
     ];
 }
 
 
 let curIndex = 0;
 
-function newSideSlides(n){
+function newSideSlides(){
     let curSlide_1 = document.getElementById("image-left");
-    if (n-1 < 0){
-        curSlide_1.src = getImageURL()[getImageURL().length-1];
+    if ((curIndex-1) < 0){
+        curSlide_1.src = getImageURL()[6];
     }
     else{
-        curSlide_1.src = getImageURL()[n-1]
-    };
+        curSlide_1.src = getImageURL()[curIndex-1];
+    }
 
     let curSlide_2 = document.getElementById("image-right");
-    if (n+1 < getImageURL().length-1){
+    if ((curIndex + 1) > (getImageURL().length-1)){
         curSlide_2.src = getImageURL()[0];
     }
     else{
-        curSlide_2.src = getImageURL()[n+1]
-    };
+        curSlide_2.src = getImageURL()[curIndex+1];
+    }
 }
 
 function newSlides(n) {
@@ -41,7 +42,7 @@ function newSlides(n) {
     let pager = document.getElementById("pager");
     pager.innerText = (curIndex + 1) + "/" + getImageURL().length;
 
-    newSideSlides(curIndex);
+    newSideSlides();
 }
 
 window.addEventListener('DOMContentLoaded', function () {
