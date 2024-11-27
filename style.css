@@ -1,0 +1,23 @@
+.image{
+    max-width: 200px;
+    max-height: 600px;
+}
+
+.image-side{
+    max-width: 200px;
+    max-height: 600px;
+    display: block;
+}
+
+div.cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media (min-width: 1024px) {
+    .image-side{
+      display: "none";
+    }
+}
