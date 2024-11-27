@@ -41,7 +41,7 @@ function newSlides(n) {
         curSlide.src = getImageURL()[curIndex];
 
     let pager = document.getElementById("pager");
-    pager.innerText = (curIndex + 1) + "/" + getImageURL().length+1;
+    pager.innerText = (curIndex + 1) + "/" + getImageURL().length;
 
     newSideSlides();
 }
