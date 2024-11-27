@@ -4,6 +4,7 @@ function getImageURL() {
         "2.jpg",
         "3.jpg",
         "4.jpg",
+        "5.jpg",
         "6.jpg",
         "7.jpg",
         "8.jpg"
@@ -16,7 +17,7 @@ let curIndex = 0;
 function newSideSlides(){
     let curSlide_1 = document.getElementById("image-left");
     if ((curIndex-1) < 0){
-        curSlide_1.src = getImageURL()[6];
+        curSlide_1.src = getImageURL()[getImageURL().length-1];
     }
     else{
         curSlide_1.src = getImageURL()[curIndex-1];
